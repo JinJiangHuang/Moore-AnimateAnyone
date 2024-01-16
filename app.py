@@ -127,7 +127,7 @@ class AnimateController:
         pose_tensor = torch.stack(pose_tensor_list, dim=0)  # (f, c, h, w)
         pose_tensor = pose_tensor.transpose(0, 1)
         pose_tensor = pose_tensor.unsqueeze(0)
-        video = torch.cat([ref_image_tensor, pose_tensor, video], dim=0)
+        # video = torch.cat([ref_image_tensor, pose_tensor, video], dim=0)
 
         save_dir = f"./output/gradio"
         if not os.path.exists(save_dir):
